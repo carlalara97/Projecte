@@ -1,0 +1,197 @@
+html, body{
+	margin: 0;
+    width: 100%;
+	height: 100%;
+	transition: background-color .5s;
+}
+
+.capçalera {
+	margin: 0;
+	background: linear-gradient(to right, #000000, #333);
+	padding: 17px;
+	overflow: hidden;
+	font-family: Arial;
+}
+
+#benvinguda {
+	font-size: 25px;
+	margin-left: 42%;
+	color: white;
+	margin-top: 10px;
+	position: absolute;
+}
+
+.desplegableset {
+	float: right;
+	overflow: hidden;   /*amaga la scroll bar */
+}
+
+.settings {
+	border: none;
+	outline:none;
+	color: white;
+	background-color: inherit; /*Pren les caracteristiques de color del pare*/
+	font-size: 16px;
+	padding: 14px 19px;
+	transition-duration: 0.5s;
+	cursor: pointer;
+	display: block;	
+}
+
+.settings:hover {
+	background-color: red;
+}
+
+.settings-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.settings-content a{
+	float: none;
+	color: black;
+	text-decoration: none;
+	text-align: left;
+	display: block;
+	padding: 12px 16px;
+}
+
+.settings-content a:hover {
+	background-color: #ddd;
+}
+
+.show {
+	display: block;   /*afageix com salts de linia */
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Centra la imatge i el boto close */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.container {
+    padding: 16px;
+}
+
+/* contenidor de tot el login */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 45%; /* Could be more or less, depending on screen size */
+}
+
+/* (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Animació de zoom al apareixer el login */
+.animate {
+    animation: animatezoom 1s
+}
+
+#open {
+	color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    transition-duration: 0.6s;
+}
+
+.sidenav .filtre:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn:hover {
+	color: red;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#mapasito {
+	width: 100%;
+	height: 100%;
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Canvi d'estil en el botó de cancelar de l'escena*/
+@media screen and (max-width: 300px) {
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+

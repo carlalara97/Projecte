@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ 	<title>Projecte Pokemon Go</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="CSS/styleSP.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div>
+		<div class="capçalera" id="cap">
+			<span id="benvinguda"><b>WELCOME tcarlala</b></span>
+			<div class="desplegableset">
+			    <button class="settings" onclick="Desplega()">Settings
+			      	<i class="fa fa-caret-down"></i>
+			    </button>
+			    <div class="settings-content" id="miDeslizable">
+			      	<a href="#" onclick="document.getElementById('id01').style.display='block'">Help</a>
+					<a href="Proj.html">Logout</a>
+			    </div>
+			</div>
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			    <a href="#" class="filtre">Non Filter</a>
+			    <a href="#" class="filtre">All pokestops</a>
+			    <a href="#" class="filtre">Non visited pokestops</a>
+			    <a href="#" class="filtre">All gyms</a>
+			    <a href="#" class="filtre">Non visited gyms</a>
+			    <a href="#" class="filtre">Best defensor pokemons</a>
+			    <a href="#" class="filtre">Best atacant pokemons</a>
+			    <a href="#" class="filtre">All pokemons</a>
+			</div>
+			<span style="font-size:30px;cursor:pointer" id="open" onclick="openNav()">&#9776; Filter by</span>
+		</div>
+	</div>
+
+	<div id="mapaimg">
+		<img src="Imagenes/mapabcn.png" id="mapasito">
+	</div>
+
+	<div id="id01" class="modal">
+	  <form class="modal-content animate">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> 
+	    </div>
+
+	    <div class="container">
+	     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat, dui eget sodales placerat, nunc tortor accumsan justo, sed convallis nisi ante eu massa. Mauris fermentum maximus enim id varius. Vivamus maximus elementum orci quis rhoncus. Cras imperdiet urna dapibus, gravida ligula eu, varius tortor. Duis tincidunt metus ut dignissim rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus aliquet est eget lacus fringilla tristique. Morbi faucibus ipsum sed diam vehicula fermentum. Phasellus pellentesque mollis fermentum. Fusce vel elementum turpis, vitae maximus dui. Nulla in faucibus sapien, nec feugiat odio. Quisque sit amet porttitor risus, vel feugiat dolor. Pellentesque mattis imperdiet quam eu consectetur. Sed mi eros, porta sit amet rutrum nec, dapibus ut sem. Aenean sit amet sapien commodo, ultrices metus commodo, rhoncus metus.
+
+		Nunc feugiat semper turpis, vehicula interdum lacus. Sed accumsan ullamcorper tempus. Mauris porta eleifend lectus, nec facilisis velit fringilla non. Etiam dignissim, tellus a rhoncus laoreet, quam ex laoreet diam, vitae pharetra purus orci id purus. Nulla eu lacinia turpis. Ut vitae felis consequat, lobortis nunc a, lobortis magna. Sed bibendum placerat turpis luctus ullamcorper. Nam quis augue elit. Pellentesque quam mauris, cursus quis nunc consequat, commodo posuere est. Ut sit amet scelerisque arcu, ut bibendum magna.
+
+		Morbi elementum fermentum dui, sit amet volutpat ipsum tempor a. Proin hendrerit auctor ex, ut ornare nisi pulvinar sed. Sed lobortis purus nunc, eu gravida metus maximus id. Suspendisse pharetra mi eget dui iaculis, eu lobortis nibh facilisis. Vivamus ultricies pulvinar felis ut malesuada. Donec iaculis magna tristique turpis imperdiet convallis. Suspendisse pellentesque eros nunc, nec dignissim quam viverra eget. Etiam dolor tellus, placerat vel fermentum sit amet, malesuada sed est. Proin ut iaculis velit. Maecenas imperdiet ac nunc id vestibulum. Nulla facilisi. Phasellus eu rutrum ligula.
+
+		Aliquam porta sapien ac ullamcorper convallis. Sed eu condimentum enim. Aenean tristique velit sit amet nisi consequat, ut volutpat nulla dignissim. In hac habitasse platea dictumst. Curabitur nec libero massa. Mauris rhoncus dictum nisi eget rutrum. Ut eleifend, neque in vulputate aliquam, nisi nunc posuere tortor, id pretium justo augue sed ante. Nullam tincidunt erat purus, eget volutpat sapien tristique in. In dolor arcu, facilisis at laoreet sit amet, vehicula non eros. Proin auctor nulla eu dictum interdum. Aenean consectetur leo lorem, sagittis consectetur purus aliquam at. Donec sit amet nunc elementum, ultrices eros sed, tempus enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sit amet lacus erat.
+	    </div>
+	  </form>
+	</div>
+
+	<script>
+		var modal = document.getElementById('id01');
+		var miDeslizable = document.getElementById("miDeslizable");
+		var filterby = document.getElementById("mySidenav")
+
+		/*Quan el usuari clica el botó es desplega o s'amaga*/
+		function Desplega() {
+		    document.getElementById("miDeslizable").classList.toggle("show");
+		}
+
+		// Per tancar si el usuari fa clik fora del desplegable
+		window.onclick = function(e) {
+		  if (!e.target.matches('.settings')) {
+		    if (miDeslizable.classList.contains('show')) {
+		        miDeslizable.classList.remove('show');
+		    }
+		    else if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		  }
+		}
+
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+		    document.getElementById("open").style.marginLeft = "250px";
+		    document.getElementById("benvinguda").style.marginLeft = "50%";
+		    document.getElementById("mapaimg").style.marginLeft = "250px";
+		    document.getElementById("mapaimg").style.opacity = "0.5";
+		}
+
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		    document.getElementById("open").style.marginLeft= "0";
+		    document.getElementById("benvinguda").style.marginLeft = "42%";
+		    document.getElementById("mapaimg").style.marginLeft = "0";
+		    document.getElementById("mapaimg").style.opacity = "1";
+		}
+	</script>
+</body>
+
+</html>
